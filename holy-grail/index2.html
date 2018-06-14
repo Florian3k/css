@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Holy Grail</title>
+</head>
+<body>
+	<div class="container">
+		<div class="header">Header</div>
+		<div class="nav">Navigation</div>
+		<div class="main">Main content</div>
+		<div class="side">Sidebar</div>
+		<div class="footer">Footer</div>
+	</div>
+
+	<style>
+		body {
+			margin: 0;
+		}
+		.container {
+			margin: 20px;
+			display: grid;
+			grid-template-columns: auto 1fr 1fr;
+			grid-template-rows: auto 1fr auto;
+			grid-gap: 2em;
+			height: calc(100vh - 40px);
+		}
+		.container > * {
+			background: lightgray;
+			border: 1px solid black;
+		}
+		.header {
+			grid-column: span 3;
+		}
+		.footer {
+			grid-column: span 3;
+		}
+	</style>
+</body>
+</html>
