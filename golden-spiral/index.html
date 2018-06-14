@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<div class="spiral">
+		<div class="spiral1">55</div>
+		<div class="spiral2">34</div>
+		<div class="spiral3">21</div>
+		<div class="spiral4">13</div>
+		<div class="spiral5">8</div>
+		<div class="spiral6">5</div>
+		<div class="spiral7">3</div>
+		<div class="spiral8"></div>
+		<div class="spiral9"></div>
+		<div class="spiral10"></div>
+	</div>
+
+	<style>
+		body {
+			margin: 0;
+		}
+		.spiral {
+			margin: auto;
+			width: 89vw;
+			height: 55vw;
+			display: grid;
+			grid-template-columns: repeat(89, 1fr);
+			grid-template-rows: repeat(55, 1fr);
+		}
+		.spiral > * {
+			background-color: lightgray;
+			border: 1px solid black;
+			box-sizing: border-box;
+		}
+		.spiral1 {
+			grid-column: 1 / span 55;
+			grid-row: 1 / span 55;
+		}
+		.spiral2 {
+			grid-column: 56 / -1;
+			grid-row: 1 / 35;
+		}
+		.spiral3 {
+			grid-column: span 21 / -1;
+			grid-row: span 21;
+		}
+		.spiral4 {
+			grid-column: 56 / span 13;
+			grid-row: span 13 / -1;
+		}
+		.spiral5 {
+			grid-column: 56 / span 8;
+			grid-row: 35 / span 8;
+		}
+		.spiral6 {
+			grid-column: span 5 / -22;
+			grid-row: 35 / span 5;
+		}
+		.spiral7 {
+			grid-column: span 3 / -22;
+			grid-row: 40 / span 3;
+		}
+		.spiral8 {
+			grid-column: 64 / span 2;
+			grid-row: span 2 / -14;
+		}
+	</style>
+</body>
+</html>
