@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<div class="header">header</div>
+	<div class="logo">logo</div>
+	<div class="advert">advert</div>
+	<div class="user">user</div>
+
+	<div class="main">main</div>
+	<div class="latest">latest</div>
+	<div class="tags">tags</div>
+	<div class="meta">meta</div>
+	<div class="comments">comments</div>
+
+	<div class="footer1">footer1</div>
+	<div class="footer2">footer2</div>
+	<div class="footer3">footer3</div>
+	<div class="footer4">footer4</div>
+
+	<style>
+		body {
+			display: grid;
+			grid-gap: 20px;
+		}
+		body > * {
+			border: 1px solid black;
+		}
+		@media (max-width: 320px) {
+			body {
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 60px 40px 200px 150px 80px 80px;
+				grid-template-areas:
+				"header header"
+				"logo user"
+				"main main"
+				"comments comments"
+				"footer1 footer1"
+				"footer2 footer2";
+			}
+			.advert, .latest, .tags, .meta, .footer3, .footer4 {
+				display: none;
+			}
+		}
+		@media (min-width: 321px) and (max-width: 786px) {
+			body {
+				grid-template-columns: 2fr 2fr 1fr 1fr 2fr 2fr;
+				grid-template-rows: 60px 120px repeat(3, 100px) 150px repeat(3, 80px);
+				grid-template-areas:
+				"header header header header header header"
+				"logo advert advert advert advert user"
+				"main main main main latest latest"
+				"main main main main tags tags"
+				"main main main main meta meta"
+				"comments comments comments comments comments comments"
+				"footer1 footer1 footer1 footer2 footer2 footer2"
+				"footer3 footer3 footer3 footer3 footer3 footer3"
+				"footer4 footer4 footer4 footer4 footer4 footer4";
+			}
+		}
+		@media (min-width: 787px) {
+			body {
+				grid-template-columns: repeat(6, 2fr) 1fr 1fr 2fr;
+				grid-template-rows: 80px repeat(3, 160px) 80px;
+				grid-template-areas:
+				"logo header header header header header header header user"
+				"main main main main main meta meta meta meta"
+				"main main main main main latest latest tags tags"
+				"comments comments comments comments comments advert advert advert advert"
+				"footer1 footer1 footer2 footer2 footer3 footer3 footer4 footer4 footer4";
+			}
+		}
+
+
+
+
+		.header {
+			grid-area: header;
+		}
+		.logo {
+			grid-area: logo;
+		}
+		.advert {
+			grid-area: advert;
+		}
+		.user {
+			grid-area: user;
+		}
+		.main {
+			grid-area: main;
+		}
+		.latest {
+			grid-area: latest;
+		}
+		.tags {
+			grid-area: tags;
+		}
+		.meta {
+			grid-area: meta;
+		}
+		.comments {
+			grid-area: comments;
+		}
+		.footer1 {
+			grid-area: footer1;
+		}
+		.footer2 {
+			grid-area: footer2;
+		}
+		.footer3 {
+			grid-area: footer3;
+		}
+		.footer4 {
+			grid-area: footer4;
+		}
+	</style>
+</body>
+</html>
