@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+		<div class="cube cube1">
+			<div class="point"></div>
+		</div>
+		<div class="cube cube4">
+			<div class="point"></div>
+			<div class="point"></div>
+			<div class="point"></div>
+			<div class="point"></div>
+		</div>
+		<div class="cube cube2">
+			<div class="point"></div>
+			<div class="point"></div>
+		</div>
+		<div class="cube cube5">
+			<div class="point"></div>
+			<div class="point"></div>
+			<div class="point"></div>
+			<div class="point"></div>
+			<div class="point"></div>
+		</div>
+		<div class="cube cube3">
+			<div class="point"></div>
+			<div class="point"></div>
+			<div class="point"></div>
+		</div>
+		<div class="cube cube6">
+			<div class="point"></div>
+			<div class="point"></div>
+			<div class="point"></div>
+			<div class="point"></div>
+			<div class="point"></div>
+			<div class="point"></div>
+		</div>
+	</div>
+
+	<style>
+		.container {
+			height: 400px;
+			display: grid;
+			justify-items: center;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr 1fr;
+		}
+		.cube {
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			display: grid;
+			grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+			
+		}
+		.cube1 {
+			grid-template-areas:
+			". . . . ."
+			". . . . ."
+			". . a . ."
+			". . . . ."
+			". . . . ."
+		}
+		.cube2 {
+			grid-template-areas:
+			". . . . ."
+			". a . . ."
+			". . . . ."
+			". . . b ."
+			". . . . ."
+		}
+		.cube3 {
+			grid-template-areas:
+			". . . . ."
+			". a . . ."
+			". . b . ."
+			". . . c ."
+			". . . . ."
+		}
+		.cube4 {
+			grid-template-areas:
+			". . . . ."
+			". a . b ."
+			". . . . ."
+			". c . d ."
+			". . . . ."
+		}
+		.cube5 {
+			grid-template-areas:
+			". . . . ."
+			". a . b ."
+			". . c . ."
+			". d . e ."
+			". . . . ."
+		}
+		.cube6 {
+			grid-template-areas:
+			". . . . ."
+			". a . b ."
+			". c . d ."
+			". e . f ."
+			". . . . ."
+		}
+		.point {
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			border: 1px solid black;
+		}
+		.point:nth-child(1) {
+			grid-area: a;
+		}
+		.point:nth-child(2) {
+			grid-area: b;
+		}
+		.point:nth-child(3) {
+			grid-area: c;
+		}
+		.point:nth-child(4) {
+			grid-area: d;
+		}
+		.point:nth-child(5) {
+			grid-area: e;
+		}
+		.point:nth-child(6) {
+			grid-area: f;
+		}
+	</style>
+</body>
+</html>
